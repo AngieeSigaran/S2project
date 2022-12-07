@@ -1,3 +1,3 @@
-public class tenk {
+public class Tenk {
     
 }
