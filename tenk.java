@@ -6,9 +6,18 @@ import java.io.*;
 import java.util.Random; 
 
 
-public class tenk extends JPanel{
+public class TenK{
 
-
+    public void TenK(){
+        ArrayList<cup> d = new ArrayList <cup>();
+            d.add(1);
+            d.add(2);
+            d.add(3);
+            d.add(4);
+            d.add(5);
+            d.add(6);
+    }
+    
     public void  diceRoll(){ 
         Random r = new Random (); 
         int d1 = r.nextInt(6) + 1; 
@@ -46,7 +55,8 @@ public class tenk extends JPanel{
             moves,
             "Which die do you want to keep?",
             JOptionPane.PLAIN_MESSAGE);
-    } 
+    }    
+    }
 
 
     public void endOfTurn (){ 
@@ -95,7 +105,7 @@ public class tenk extends JPanel{
                 }
             }
             int keepVal = largestIndex + 1;
-            for(Die d : this.putInCup()){
+            for(Die d : this.cup()){
                 int val = d.getValue();
                 if(val == keepVal)
                     d.setKeep(true);
@@ -103,12 +113,11 @@ public class tenk extends JPanel{
                     d.setKeep(false);
             
         }
-
-
-
-
     }
+
+    
 }
+
 
 
 
